@@ -948,7 +948,9 @@ About Us Style
 }
 
 .about-us {
-  background-image: url(../images/about-bg.png);
+  /* background-color: aqua;
+  background-image: url(../images/svg.png); */
+  background-image: url(../images/baner-dec-right.png);
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
@@ -973,14 +975,14 @@ About Us Style
 }
 
 .about-us .services .item h4 {
-  color: #fff;
+  color: #070505;
   font-size: 20px;
   font-weight: 700;
   margin-bottom: 12px;
 }
 
 .about-us .services .item p {
-  color: #fff;
+  color: #070505;
 }
 
 
@@ -1288,8 +1290,11 @@ contact
 */
 
 .contact-us {
-  padding: 160px 0px;
-  background-image: url(../images/contact-bg.png);
+  padding: 100px 0px;
+  /* background-color: aqua;
+  background-image: url(../images/svg.png); */
+  /* background-image: url(../images/contact-bg.png); */
+  background-image: url(../images/baner-dec-right.png);
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
@@ -1298,11 +1303,11 @@ contact
 .contact-us .section-heading h2,
 .contact-us .section-heading h2 em,
 .contact-us .section-heading h2 span {
-  color: #fff;
+  color: #0e0909;
 }
 
 .contact-us .section-heading p {
-  color: #fff;
+  color: #070606;
   margin-top: 30px;
 }
 
@@ -1313,7 +1318,7 @@ contact
 .phone-info h4 {
   font-size: 20px;
   font-weight: 700;
-  color: #fff;
+  color: #0e0909;
 }
 
 .phone-info h4 span i {
@@ -1331,7 +1336,7 @@ contact
 }
 
 .phone-info h4 span a {
-  color: #fff;
+  color: #0e0a0a;
   font-size: 15px;
   font-weight: 400;
 }
@@ -1349,9 +1354,10 @@ form#contact .contact-dec img {
 form#contact {
   margin-left: 30px;
   position: relative;
-  background-color: #fff;
+  background-color: white;
   padding: 60px 30px;
   border-radius: 20px;
+  border-color: #050404;
 }
 
 form#contact input {
