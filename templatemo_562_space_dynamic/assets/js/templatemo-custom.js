@@ -130,6 +130,49 @@
     });
   }
 
+  // Contact Form Enhancement with EmailJS
+  $('#contact').on('submit', function(e) {
+    e.preventDefault();
+    
+    var form = $(this);
+    var submitBtn = form.find('#form-submit');
+    var originalText = submitBtn.text();
+    
+    // Show loading state
+    submitBtn.text('Sending...').prop('disabled', true);
+    
+    // Get form data
+    var templateParams = {
+      from_name: form.find('#name').val() + ' ' + form.find('#surname').val(),
+      from_email: form.find('#email').val(),
+      message: form.find('#message').val(),
+      to_email: 'rozashekh1@gmail.com'
+    };
+    
+    // Send email using EmailJS
+    emailjs.send('YOUR_SERVICE_ID', 'YOUR_TEMPLATE_ID', templateParams)
+      .then(function(response) {
+        // Success
+        submitBtn.text('Message Sent!').removeClass('main-button').addClass('btn-success');
+        alert('Thank you! Your message has been sent successfully. I will get back to you soon.');
+        form[0].reset();
+        
+        // Reset button after 3 seconds
+        setTimeout(function() {
+          submitBtn.text(originalText).removeClass('btn-success').addClass('main-button').prop('disabled', false);
+        }, 3000);
+      }, function(error) {
+        // Error
+        submitBtn.text('Error - Try Again').removeClass('main-button').addClass('btn-danger');
+        alert('Sorry, there was an error sending your message. Please try again or contact me directly.');
+        
+        // Reset button after 3 seconds
+        setTimeout(function() {
+          submitBtn.text(originalText).removeClass('btn-danger').addClass('main-button').prop('disabled', false);
+        }, 3000);
+      });
+  });
+
 
 
 
